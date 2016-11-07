@@ -3,7 +3,10 @@
 #include <string>
 #include <cstring>
 #include <iostream>
-
+#include <bitset>
+#include <cstdio>
+#include <fstream>
+#include <math.h>
 using namespace std;
 
 typedef unsigned char uchar;
@@ -29,9 +32,9 @@ class PPM {
     ~PPM();
 
 	void read(const string &);
-        void write(const string &);
+    void write(const string &);
 	void write(const string &, const string &);
-	void process(pmode_t, const string &);
+	void process(const string &);
   private:
 	string magicid;
     int nrows, ncols;
@@ -40,6 +43,5 @@ class PPM {
 	vector<RGB> qcolors;
 
 	void read_qcolors(const string &);
-	void process1();
-	void process2();
+	
 };

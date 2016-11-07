@@ -18,6 +18,11 @@ int main(int argc, char *argv[])
 	string imagename = argv[2];
 	string output = "out_" + imagename;
 	cout << txtname << " " << imagename << " " << output <<"\n";
+	PPM ppm;
+	ppm.read(imagename);
+	ppm.process(txtname);
+	ppm.write(imagename,output);
+	return 0;
 	
 }
 
